@@ -1,0 +1,44 @@
+<!-- write javascript to demonstrate conditional statement and looping(for,while,dowhile) -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+        // Conditional Statement
+var number = Number(prompt("Enter a number:"));
+
+if (number % 2 == 0) {
+    alert("The number is EVEN");
+} else {
+    alert("The number is ODD");
+}
+
+// FOR loop
+alert("Numbers using FOR loop:");
+for (var i = 1; i <= 5; i++) {
+    alert(i);
+}
+
+// WHILE loop
+alert("Numbers using WHILE loop:");
+var j = 1;
+while (j <= 5) {
+    alert(j);
+    j++;
+}
+
+// DO-WHILE loop
+alert("Numbers using DO-WHILE loop:");
+var k = 1;
+do {
+    alert(k);
+    k++;
+} while (k <= 5);
+    </script>
+    
+ </body>
+ </html>

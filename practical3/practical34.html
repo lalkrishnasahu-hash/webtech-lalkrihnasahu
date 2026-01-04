@@ -1,0 +1,59 @@
+<!-- handle html form validation using javascript event like onsubmit,removeEventListner(),for mouse/keyword events -->
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Easy Validation</title>
+</head>
+<body>
+
+<form onsubmit="return validate()">
+    Name:
+    <input type="text" id="n"><br><br>
+
+    Password:
+    <input type="password" id="p"><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+<br>
+
+<button id="b">Click</button>
+<p id="m"></p>
+
+<script>
+function validate() {
+    var n = document.getElementById("n").value;
+    var p = document.getElementById("p").value;
+
+    if (n == "" || p == "") {
+        alert("Enter all details");
+        return false;
+    }
+
+    alert("Form Submitted");
+    return true;
+}
+
+function mouse() {
+    document.getElementById("m").innerHTML = "Mouse Event";
+}
+
+function key() {
+    document.getElementById("m").innerHTML = "Keyboard Event";
+}
+
+var btn = document.getElementById("b");
+
+btn.addEventListener("click", mouse);
+document.addEventListener("keydown", key);
+
+setTimeout(function () {
+    btn.removeEventListener("click", mouse);
+    document.removeEventListener("keydown", key);
+    document.getElementById("m").innerHTML = "Events Removed";
+}, 5000);
+</script>
+
+</body>
+</html>

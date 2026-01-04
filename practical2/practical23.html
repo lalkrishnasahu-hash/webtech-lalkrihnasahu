@@ -1,0 +1,41 @@
+<!-- demonmstrate the use of different css selectors(class,id,descendent,group,universal) -->
+ <!DOCTYPE html>
+<html>
+<head>
+<title>CSS Selectors Example</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .highlight {
+    background-color: yellow;
+    color: black;
+    padding: 5px;
+  }
+  #title {
+    color: darkblue;
+    text-align: center;
+  }
+  div {
+    color: green;
+  }
+  p {
+    color: brown;
+    text-decoration: underline;
+  }
+  h3:nth-child(1) {
+    color: black;
+  }
+</style>
+</head>
+<body>
+
+<h3 id="title">International</h3>
+<p>This is skills university</p>
+
+<p>The <span class="highlight">highlight</span> in this paragraph selector is used. <strong>strong</strong> Here</p>
+<p>My name is <strong>Bhaskar Singh</strong> admitted in new university named <strong>RISUSTAP</strong>.</p>
+
+</body>
+</html>

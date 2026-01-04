@@ -1,0 +1,23 @@
+<!-- show or hide html element using Javascript and Toggle css classes dynamically -->
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Toggle Highlight</title>
+</head>
+<body>
+
+<h2 id="heading">Click the button to highlight me</h2>
+
+<button id="btn">Toggle Highlight</button>
+
+<script>
+var heading = document.getElementById("heading");
+var btn = document.getElementById("btn");
+
+btn.addEventListener("click", function() {
+    heading.classList.toggle("highlight");
+});
+</script>
+
+</body>
+</html>

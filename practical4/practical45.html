@@ -1,0 +1,35 @@
+<!-- create simple drawing using the <canva>element : draw shapes and fill colors -->
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Canvas Drawing</title>
+</head>
+<body>
+
+<h2>Canvas Drawing Example</h2>
+
+<canvas id="myCanvas" width="400" height="300" style="border:1px solid #000000;"></canvas>
+
+<script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+
+ctx.fillStyle = "lightblue";
+ctx.fillRect(50, 50, 100, 100);
+
+ctx.fillStyle = "green";
+ctx.beginPath();
+ctx.arc(250, 100, 50, 0, 2 * Math.PI);
+ctx.fill();
+
+ctx.fillStyle = "red";
+ctx.beginPath();
+ctx.moveTo(150, 200);
+ctx.lineTo(250, 200);
+ctx.lineTo(200, 250);
+ctx.closePath();
+ctx.fill();
+</script>
+
+</body>
+</html>
